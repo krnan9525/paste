@@ -1,5 +1,5 @@
 // https://styled-system.com/api/#position
-import type * as CSS from 'csstype';
+import type {Property} from 'csstype';
 import type {ThemeShape} from '@twilio-paste/theme';
 import type {ResponsiveValue, TLengthStyledSystem} from '@twilio-paste/styling-library';
 
@@ -9,11 +9,11 @@ export type ZIndex = ResponsiveValue<ZIndexOptions>;
 
 // CSS native
 
-export type PositionOptions = CSS.PositionProperty;
-export type TopOptions = CSS.TopProperty<TLengthStyledSystem>;
-export type RightOptions = CSS.RightProperty<TLengthStyledSystem>;
-export type BottomOptions = CSS.BottomProperty<TLengthStyledSystem>;
-export type LeftOptions = CSS.LeftProperty<TLengthStyledSystem>;
+export type PositionOptions = Property.Position;
+export type TopOptions = Property.Top<TLengthStyledSystem>;
+export type RightOptions = Property.Right<TLengthStyledSystem>;
+export type BottomOptions = Property.Bottom<TLengthStyledSystem>;
+export type LeftOptions = Property.Left<TLengthStyledSystem>;
 
 export type Position = ResponsiveValue<PositionOptions>;
 export type Top = ResponsiveValue<TopOptions>;

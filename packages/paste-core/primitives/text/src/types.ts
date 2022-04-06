@@ -1,10 +1,4 @@
-import type {
-  CursorProperty,
-  OutlineProperty,
-  TextTransformProperty,
-  TransitionProperty,
-  FontVariantNumericProperty,
-} from 'csstype';
+import type {Property} from 'csstype';
 import type {CustomTheme} from '@twilio-paste/customization';
 import type {
   Display,
@@ -19,14 +13,14 @@ import type {PseudoPropStyles} from './PseudoPropStyles';
 
 export interface TextBaseStyleProps extends OverflowProps, PositionProps, ShadowProps, SpaceProps, TypographyProps {
   content?: string;
-  cursor?: CursorProperty;
+  cursor?: Property.Cursor;
   display?: Display;
-  outline?: OutlineProperty<string>;
+  outline?: Property.Outline;
   // Do not document, we prefer if folks do not use this property for i18n.
-  textTransform?: TextTransformProperty;
-  transition?: TransitionProperty;
+  textTransform?: Property.TextTransform;
+  transition?: Property.Transition;
   verticalAlign?: VerticalAlign;
-  fontVariantNumeric?: FontVariantNumericProperty;
+  fontVariantNumeric?: Property.FontVariantNumeric;
 }
 
 export type TextPseudoStyleProps = {

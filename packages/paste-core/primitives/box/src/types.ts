@@ -9,33 +9,7 @@ import type {
   TypographyProps,
 } from '@twilio-paste/style-props';
 import type {CustomTheme} from '@twilio-paste/customization';
-import type {
-  AnimationProperty,
-  AppearanceProperty,
-  BorderCollapseProperty,
-  BorderSpacingProperty,
-  BoxSizingProperty,
-  ClipProperty,
-  CursorProperty,
-  FloatProperty,
-  FontVariantNumericProperty,
-  ListStyleImageProperty,
-  ListStylePositionProperty,
-  ListStyleTypeProperty,
-  ObjectFitProperty,
-  ObjectPositionProperty,
-  OpacityProperty,
-  OutlineProperty,
-  PointerEventsProperty,
-  ResizeProperty,
-  TableLayoutProperty,
-  TransformOriginProperty,
-  TransformProperty,
-  TransitionProperty,
-  UserSelectProperty,
-  VisibilityProperty,
-  WillChangeProperty,
-} from 'csstype';
+import type {Property} from 'csstype';
 import type {PseudoPropStyles} from './PseudoPropStyles';
 
 export interface BoxBaseStyleProps
@@ -47,32 +21,32 @@ export interface BoxBaseStyleProps
     PositionProps,
     TypographyProps,
     FlexboxProps {
-  animation?: AnimationProperty;
-  appearance?: AppearanceProperty;
-  borderCollapse?: BorderCollapseProperty;
-  borderSpacing?: BorderSpacingProperty<string>;
-  boxSizing?: BoxSizingProperty;
-  clip?: ClipProperty;
+  animation?: Property.Animation;
+  appearance?: Property.Appearance;
+  borderCollapse?: Property.BorderCollapse;
+  borderSpacing?: Property.BorderSpacing;
+  boxSizing?: Property.BoxSizing;
+  clip?: Property.Clip;
   content?: string;
-  cursor?: CursorProperty;
-  float?: FloatProperty;
-  fontVariantNumeric?: FontVariantNumericProperty;
-  listStyleImage?: ListStyleImageProperty;
-  listStylePosition?: ListStylePositionProperty;
-  listStyleType?: ListStyleTypeProperty;
-  objectFit?: ObjectFitProperty;
-  objectPosition?: ObjectPositionProperty<string>;
-  opacity?: OpacityProperty;
-  outline?: OutlineProperty<string>;
-  pointerEvents?: PointerEventsProperty;
-  resize?: ResizeProperty;
-  tableLayout?: TableLayoutProperty;
-  transform?: TransformProperty;
-  transformOrigin?: TransformOriginProperty<string>;
-  transition?: TransitionProperty;
-  userSelect?: UserSelectProperty;
-  visibility?: VisibilityProperty;
-  willChange?: WillChangeProperty;
+  cursor?: Property.Cursor;
+  float?: Property.Float;
+  fontVariantNumeric?: Property.FontVariantNumeric;
+  listStyleImage?: Property.ListStyleImage;
+  listStylePosition?: Property.ListStylePosition;
+  listStyleType?: Property.ListStyleType;
+  objectFit?: Property.ObjectFit;
+  objectPosition?: Property.ObjectPosition;
+  opacity?: Property.Opacity;
+  outline?: Property.Outline;
+  pointerEvents?: Property.PointerEvents;
+  resize?: Property.Resize;
+  tableLayout?: Property.TableLayout;
+  transform?: Property.Transform;
+  transformOrigin?: Property.TransformOrigin;
+  transition?: Property.Transition;
+  userSelect?: Property.UserSelect;
+  visibility?: Property.Visibility;
+  willChange?: Property.WillChange;
   '-webkit-text-fill-color'?: string;
   '-webkit-opacity'?: string;
 }

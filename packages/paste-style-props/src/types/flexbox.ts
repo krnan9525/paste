@@ -1,5 +1,5 @@
 // https://styled-system.com/api/#flexbox
-import type * as CSS from 'csstype';
+import type {Globals, Property} from 'csstype';
 import type {ResponsiveValue, TLengthStyledSystem} from '@twilio-paste/styling-library';
 
 /**
@@ -11,7 +11,18 @@ import type {ResponsiveValue, TLengthStyledSystem} from '@twilio-paste/styling-l
  *
  * [MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)
  */
-export type AlignItemsOptions = CSS.Globals | CSS.SelfPosition | 'baseline' | 'normal' | 'stretch';
+export type AlignItemsOptions =
+  | Globals
+  | 'center'
+  | 'end'
+  | 'flex-end'
+  | 'flex-start'
+  | 'self-end'
+  | 'self-start'
+  | 'start'
+  | 'baseline'
+  | 'normal'
+  | 'stretch';
 export type AlignItems = ResponsiveValue<AlignItemsOptions>;
 
 /**
@@ -20,7 +31,19 @@ export type AlignItems = ResponsiveValue<AlignItemsOptions>;
  *
  * [MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content)
  */
-export type AlignContentOptions = CSS.Globals | CSS.ContentDistribution | CSS.ContentPosition | 'baseline' | 'normal';
+export type AlignContentOptions =
+  | Globals
+  | 'space-around'
+  | 'space-between'
+  | 'space-evenly'
+  | 'stretch'
+  | 'center'
+  | 'end'
+  | 'flex-end'
+  | 'flex-start'
+  | 'start'
+  | 'baseline'
+  | 'normal';
 export type AlignContent = ResponsiveValue<AlignContentOptions>;
 
 /**
@@ -30,8 +53,14 @@ export type AlignContent = ResponsiveValue<AlignContentOptions>;
  * [MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-items)
  */
 export type JustifyItemsOptions =
-  | CSS.Globals
-  | CSS.SelfPosition
+  | Globals
+  | 'center'
+  | 'end'
+  | 'flex-end'
+  | 'flex-start'
+  | 'self-end'
+  | 'self-start'
+  | 'start'
   | 'baseline'
   | 'left'
   | 'legacy'
@@ -47,9 +76,16 @@ export type JustifyItems = ResponsiveValue<JustifyItemsOptions>;
  * [MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content)
  */
 export type JustifyContentOptions =
-  | CSS.Globals
-  | CSS.ContentDistribution
-  | CSS.ContentPosition
+  | Globals
+  | 'space-around'
+  | 'space-between'
+  | 'space-evenly'
+  | 'stretch'
+  | 'center'
+  | 'end'
+  | 'flex-end'
+  | 'flex-start'
+  | 'start'
   | 'left'
   | 'normal'
   | 'right';
@@ -61,14 +97,14 @@ export type JustifyContent = ResponsiveValue<JustifyContentOptions>;
  *
  * [MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap)
  */
-export type FlexWrapOptions = CSS.FlexWrapProperty;
+export type FlexWrapOptions = Property.FlexWrap;
 export type FlexWrap = ResponsiveValue<FlexWrapOptions>;
 
 // TODO: The FlexBasisValue currently really only exists for documentation
 //       purposes, because flex-basis also accepts `Nem` and `Npx` strings.
 //       Not sure there’s a way to still have the union values show up as
 //       auto-completion results.
-export type FlexBasisOptions = CSS.FlexBasisProperty<TLengthStyledSystem>;
+export type FlexBasisOptions = Property.FlexBasis<TLengthStyledSystem>;
 export type FlexBasis = ResponsiveValue<FlexBasisOptions>;
 
 /**
@@ -77,7 +113,7 @@ export type FlexBasis = ResponsiveValue<FlexBasisOptions>;
  *
  * [MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction)
  */
-export type FlexDirectionOptions = CSS.FlexDirectionProperty;
+export type FlexDirectionOptions = Property.FlexDirection;
 export type FlexDirection = ResponsiveValue<FlexDirectionOptions>;
 
 /**
@@ -86,7 +122,7 @@ export type FlexDirection = ResponsiveValue<FlexDirectionOptions>;
  *
  * [MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/flex)
  */
-export type FlexOptions = CSS.FlexProperty<TLengthStyledSystem>;
+export type FlexOptions = Property.Flex<TLengthStyledSystem>;
 export type Flex = ResponsiveValue<FlexOptions>;
 
 /**
@@ -95,19 +131,8 @@ export type Flex = ResponsiveValue<FlexOptions>;
  *
  * [MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-self)
  */
-export type JustifySelfOptions =
-  | CSS.Globals
-  | CSS.SelfPosition
-  | 'auto'
-  | 'baseline'
-  | 'left'
-  | 'normal'
-  | 'right'
-  | 'stretch'
-  | string;
-export type JustifySelf =
-  | ResponsiveValue<CSS.Globals | CSS.SelfPosition | 'auto' | 'baseline' | 'left' | 'normal' | 'right' | 'stretch'>
-  | ResponsiveValue<string>;
+export type JustifySelfOptions = Property.JustifySelf;
+export type JustifySelf = ResponsiveValue<JustifySelfOptions>;
 
 /**
  * The align-self CSS property aligns flex items of the current flex line overriding the align-items value.
@@ -117,10 +142,8 @@ export type JustifySelf =
  *
  * [MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/align-self)
  */
-export type AlignSelfOptions = CSS.Globals | CSS.SelfPosition | 'auto' | 'baseline' | 'normal' | 'stretch' | string;
-export type AlignSelf =
-  | ResponsiveValue<CSS.Globals | CSS.SelfPosition | 'auto' | 'baseline' | 'normal' | 'stretch'>
-  | ResponsiveValue<string>;
+export type AlignSelfOptions = Property.AlignSelf;
+export type AlignSelf = ResponsiveValue<AlignSelfOptions>;
 
 /**
  * The order CSS property sets the order to lay out an item in a flex or grid container. Items in a container
@@ -128,7 +151,7 @@ export type AlignSelf =
  *
  * [MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/order)
  */
-export type OrderOptions = CSS.GlobalsNumber;
+export type OrderOptions = Property.Order;
 export type Order = ResponsiveValue<OrderOptions>;
 
 /**
@@ -137,7 +160,7 @@ export type Order = ResponsiveValue<OrderOptions>;
  *
  * [MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow)
  */
-export type FlexGrowOptions = CSS.GlobalsNumber;
+export type FlexGrowOptions = Property.FlexGrow;
 export type FlexGrow = ResponsiveValue<FlexGrowOptions>;
 
 /**
@@ -146,7 +169,7 @@ export type FlexGrow = ResponsiveValue<FlexGrowOptions>;
  *
  * [MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink)
  */
-export type FlexShrinkOptions = CSS.GlobalsNumber;
+export type FlexShrinkOptions = Property.FlexShrink;
 export type FlexShrink = ResponsiveValue<FlexShrinkOptions>;
 
 export interface FlexboxProps {
