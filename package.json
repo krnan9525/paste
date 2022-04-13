@@ -222,7 +222,8 @@
     "webpack": "^4.44.2"
   },
   "resolutions": {
-    "@emotion/core": "10.0.28",
+    "@emotion/core": "npm:@emotion/react@11.9.0",
+    "@storybook/theming/emotion-theming": "npm:@emotion/react@latest",
     "react-hot-loader": "^4.13.0"
   },
   "husky": {
