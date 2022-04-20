@@ -1,10 +1,11 @@
 // https://styled-system.com/api/#layout
-import type {StandardLonghandProperties} from 'csstype';
+import type {StandardLonghandProperties, StandardShorthandProperties} from 'csstype';
 import type {ThemeShape} from '@twilio-paste/theme';
 import type {ResponsiveValue, TLengthStyledSystem} from '@twilio-paste/styling-library';
 
 // Tokens
 type LonghandProperties = StandardLonghandProperties<TLengthStyledSystem>;
+type ShorthandProperties = StandardShorthandProperties<TLengthStyledSystem>;
 export type WidthOptions = keyof ThemeShape['widths'] | '100%' | '100vw' | 'auto' | LonghandProperties['width'];
 export type MinWidthOptions =
   | keyof ThemeShape['minWidths']
@@ -45,7 +46,7 @@ export type Size = Width | Height;
 // CSS native
 export type DisplayOptions = LonghandProperties['display'];
 export type VerticalAlignOptions = LonghandProperties['verticalAlign'];
-export type OverflowOptions = LonghandProperties['overflowAnchor']; // @TODO might need to expand this
+export type OverflowOptions = ShorthandProperties['overflow'];
 export type OverflowXOptions = LonghandProperties['overflowX'];
 export type OverflowYOptions = LonghandProperties['overflowY'];
 

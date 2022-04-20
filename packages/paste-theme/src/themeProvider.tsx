@@ -62,7 +62,6 @@ const ThemeProvider: React.FunctionComponent<ThemeProviderProps> = ({
 
   return (
     <StyledThemeProvider theme={providerThemeProps}>
-      {/* // @ts-expect-error @TODO fix type (emotion/11) */}
       <StylingGlobals styles={pasteGlobalStyles({theme: providerThemeProps})} />
       <StylingGlobals styles={pasteFonts} />
       <StyledBase className="paste-theme-provider" {...props} />

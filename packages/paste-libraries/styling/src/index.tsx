@@ -2,9 +2,16 @@
 import styled from '@emotion/styled';
 
 export type {StyledComponent} from '@emotion/styled';
-export type {SerializedStyles} from '@emotion/core';
-export {Global as StylingGlobals, ThemeContext, keyframes, css as EmotionCSS} from '@emotion/core';
-export {ThemeProvider, withTheme} from 'emotion-theming';
+export type {SerializedStyles} from '@emotion/react';
+export {
+  Global as StylingGlobals,
+  ThemeContext,
+  keyframes,
+  css as EmotionCSS,
+  ThemeProvider,
+  withTheme,
+} from '@emotion/react';
+
 export {styled};
 
 // Custom styling application (styled-system)

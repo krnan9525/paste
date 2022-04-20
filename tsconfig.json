@@ -20,7 +20,7 @@
     "skipLibCheck": true,
     "sourceMap": true,
     "target": "es6",
-    "typeRoots": ["./@types", "node_modules/@types"],
+    "typeRoots": ["@types", "node_modules/@types", "./.jest/@types"],
     "forceConsistentCasingInFileNames": true,
     "newLine": "lf",
     "noUnusedLocals": true,
@@ -29,7 +29,8 @@
     "resolveJsonModule": true,
     "esModuleInterop": true
   },
-  "include": ["packages/**/*", "dangerfile.ts", ".danger/**/*", "./.jest/@types/index.d.ts", "tools/**/*"],
+  "files": ["node_modules/@emotion/react/types/css-prop.d.ts"],
+  "include": ["packages/**/*", "dangerfile.ts", ".danger/**/*", "tools/**/*"],
   "exclude": [
     "node_modules",
     "docs",

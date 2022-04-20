@@ -1,4 +1,4 @@
-const getPresets = isDev => [
+const getPresets = (isDev) => [
   'babel-preset-gatsby',
   [
     '@emotion/babel-preset-css-prop',

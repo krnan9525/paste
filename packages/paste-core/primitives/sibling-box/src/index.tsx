@@ -23,7 +23,6 @@ export interface SiblingBoxProps extends BoxProps {
   type?: 'checkbox' | 'radio';
 }
 
-/* eslint-disable emotion/syntax-preference */
 const StyledSiblingBox = styled(Box)<SiblingBoxProps>(
   ({
     _activeSibling,
@@ -77,7 +76,6 @@ const StyledSiblingBox = styled(Box)<SiblingBoxProps>(
     });
   }
 );
-/* eslint-enable */
 
 const SiblingBox: React.FC<SiblingBoxProps> = ({
   'aria-hidden': ariaHidden = 'true',

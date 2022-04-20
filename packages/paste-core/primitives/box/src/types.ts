@@ -11,31 +11,6 @@ import type {
 import type {TLengthStyledSystem} from '@twilio-paste/styling-library';
 import type {CustomTheme} from '@twilio-paste/customization';
 import type {StandardLonghandProperties, StandardShorthandProperties} from 'csstype';
-// AnimationProperty,
-// AppearanceProperty,
-// BorderCollapseProperty,
-// BorderSpacingProperty,
-// BoxSizingProperty,
-// ClipProperty,
-// CursorProperty,
-// FloatProperty,
-// FontVariantNumericProperty,
-// ListStyleImageProperty,
-// ListStylePositionProperty,
-// ListStyleTypeProperty,
-// ObjectFitProperty,
-// ObjectPositionProperty,
-// OpacityProperty,
-// OutlineProperty,
-// PointerEventsProperty,
-// ResizeProperty,
-// TableLayoutProperty,
-// TransformOriginProperty,
-// TransformProperty,
-// TransitionProperty,
-// UserSelectProperty,
-// VisibilityProperty,
-// WillChangeProperty,
 
 // 'csstype';
 import type {PseudoPropStyles} from './PseudoPropStyles';
