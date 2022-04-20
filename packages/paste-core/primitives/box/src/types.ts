@@ -8,35 +8,40 @@ import type {
   SpaceProps,
   TypographyProps,
 } from '@twilio-paste/style-props';
+import type {TLengthStyledSystem} from '@twilio-paste/styling-library';
 import type {CustomTheme} from '@twilio-paste/customization';
-import type {
-  AnimationProperty,
-  AppearanceProperty,
-  BorderCollapseProperty,
-  BorderSpacingProperty,
-  BoxSizingProperty,
-  ClipProperty,
-  CursorProperty,
-  FloatProperty,
-  FontVariantNumericProperty,
-  ListStyleImageProperty,
-  ListStylePositionProperty,
-  ListStyleTypeProperty,
-  ObjectFitProperty,
-  ObjectPositionProperty,
-  OpacityProperty,
-  OutlineProperty,
-  PointerEventsProperty,
-  ResizeProperty,
-  TableLayoutProperty,
-  TransformOriginProperty,
-  TransformProperty,
-  TransitionProperty,
-  UserSelectProperty,
-  VisibilityProperty,
-  WillChangeProperty,
-} from 'csstype';
+import type {StandardLonghandProperties, StandardShorthandProperties} from 'csstype';
+// AnimationProperty,
+// AppearanceProperty,
+// BorderCollapseProperty,
+// BorderSpacingProperty,
+// BoxSizingProperty,
+// ClipProperty,
+// CursorProperty,
+// FloatProperty,
+// FontVariantNumericProperty,
+// ListStyleImageProperty,
+// ListStylePositionProperty,
+// ListStyleTypeProperty,
+// ObjectFitProperty,
+// ObjectPositionProperty,
+// OpacityProperty,
+// OutlineProperty,
+// PointerEventsProperty,
+// ResizeProperty,
+// TableLayoutProperty,
+// TransformOriginProperty,
+// TransformProperty,
+// TransitionProperty,
+// UserSelectProperty,
+// VisibilityProperty,
+// WillChangeProperty,
+
+// 'csstype';
 import type {PseudoPropStyles} from './PseudoPropStyles';
+
+type LonghandProperties = StandardLonghandProperties<TLengthStyledSystem>;
+type ShorthandProperties = StandardShorthandProperties<TLengthStyledSystem>;
 
 export interface BoxBaseStyleProps
   extends LayoutProps,
@@ -47,32 +52,32 @@ export interface BoxBaseStyleProps
     PositionProps,
     TypographyProps,
     FlexboxProps {
-  animation?: AnimationProperty;
-  appearance?: AppearanceProperty;
-  borderCollapse?: BorderCollapseProperty;
-  borderSpacing?: BorderSpacingProperty<string>;
-  boxSizing?: BoxSizingProperty;
-  clip?: ClipProperty;
+  animation?: ShorthandProperties['animation'];
+  appearance?: LonghandProperties['appearance'];
+  borderCollapse?: LonghandProperties['borderCollapse'];
+  borderSpacing?: LonghandProperties['borderSpacing'];
+  boxSizing?: LonghandProperties['boxSizing'];
+  clip?: LonghandProperties['clipPath'];
   content?: string;
-  cursor?: CursorProperty;
-  float?: FloatProperty;
-  fontVariantNumeric?: FontVariantNumericProperty;
-  listStyleImage?: ListStyleImageProperty;
-  listStylePosition?: ListStylePositionProperty;
-  listStyleType?: ListStyleTypeProperty;
-  objectFit?: ObjectFitProperty;
-  objectPosition?: ObjectPositionProperty<string>;
-  opacity?: OpacityProperty;
-  outline?: OutlineProperty<string>;
-  pointerEvents?: PointerEventsProperty;
-  resize?: ResizeProperty;
-  tableLayout?: TableLayoutProperty;
-  transform?: TransformProperty;
-  transformOrigin?: TransformOriginProperty<string>;
-  transition?: TransitionProperty;
-  userSelect?: UserSelectProperty;
-  visibility?: VisibilityProperty;
-  willChange?: WillChangeProperty;
+  cursor?: LonghandProperties['cursor'];
+  float?: LonghandProperties['float'];
+  fontVariantNumeric?: LonghandProperties['fontVariantNumeric'];
+  listStyleImage?: LonghandProperties['listStyleImage'];
+  listStylePosition?: LonghandProperties['listStylePosition'];
+  listStyleType?: LonghandProperties['listStyleType'];
+  objectFit?: LonghandProperties['objectFit'];
+  objectPosition?: LonghandProperties['objectPosition'];
+  opacity?: LonghandProperties['opacity'];
+  outline?: ShorthandProperties['outline'];
+  pointerEvents?: LonghandProperties['pointerEvents'];
+  resize?: LonghandProperties['resize'];
+  tableLayout?: LonghandProperties['tableLayout'];
+  transform?: LonghandProperties['transform'];
+  transformOrigin?: LonghandProperties['transformOrigin'];
+  transition?: ShorthandProperties['transition'];
+  userSelect?: LonghandProperties['userSelect'];
+  visibility?: LonghandProperties['visibility'];
+  willChange?: LonghandProperties['willChange'];
   '-webkit-text-fill-color'?: string;
   '-webkit-opacity'?: string;
 }

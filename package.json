@@ -224,6 +224,7 @@
   "resolutions": {
     "@emotion/core": "npm:@emotion/react@11.9.0",
     "@storybook/theming/emotion-theming": "npm:@emotion/react@latest",
+    "csstype": "npm:csstype@latest",
     "react-hot-loader": "^4.13.0"
   },
   "husky": {

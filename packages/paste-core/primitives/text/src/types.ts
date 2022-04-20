@@ -1,10 +1,4 @@
-import type {
-  CursorProperty,
-  OutlineProperty,
-  TextTransformProperty,
-  TransitionProperty,
-  FontVariantNumericProperty,
-} from 'csstype';
+import type {StandardLonghandProperties, StandardShorthandProperties} from 'csstype';
 import type {CustomTheme} from '@twilio-paste/customization';
 import type {
   Display,
@@ -15,18 +9,22 @@ import type {
   TypographyProps,
   VerticalAlign,
 } from '@twilio-paste/style-props';
+import type {TLengthStyledSystem} from '@twilio-paste/styling-library';
 import type {PseudoPropStyles} from './PseudoPropStyles';
+
+type LonghandProperties = StandardLonghandProperties<TLengthStyledSystem>;
+type ShorthandProperties = StandardShorthandProperties<TLengthStyledSystem>;
 
 export interface TextBaseStyleProps extends OverflowProps, PositionProps, ShadowProps, SpaceProps, TypographyProps {
   content?: string;
-  cursor?: CursorProperty;
+  cursor?: LonghandProperties['cursor'];
   display?: Display;
-  outline?: OutlineProperty<string>;
+  outline?: ShorthandProperties['outline'];
   // Do not document, we prefer if folks do not use this property for i18n.
-  textTransform?: TextTransformProperty;
-  transition?: TransitionProperty;
+  textTransform?: LonghandProperties['textTransform'];
+  transition?: ShorthandProperties['transition'];
   verticalAlign?: VerticalAlign;
-  fontVariantNumeric?: FontVariantNumericProperty;
+  fontVariantNumeric?: LonghandProperties['fontVariantNumeric'];
 }
 
 export type TextPseudoStyleProps = {

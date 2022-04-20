@@ -1,5 +1,5 @@
 // https://styled-system.com/api/#background
-import type * as CSS from 'csstype';
+import type {StandardLonghandProperties} from 'csstype';
 import type {ThemeShape} from '@twilio-paste/theme';
 import type {ResponsiveValue, TLengthStyledSystem} from '@twilio-paste/styling-library';
 import type {StyleReset} from './helpers';
@@ -9,11 +9,14 @@ export type BackgroundColorOptions = keyof ThemeShape['backgroundColors'];
 export type BackgroundColor = ResponsiveValue<BackgroundColorOptions | 'none' | 'transparent' | 'inherit'>;
 
 // CSS native
-export type BackgroundImageOptions = CSS.BackgroundImageProperty;
-export type BackgroundSizeOptions = CSS.BackgroundSizeProperty<TLengthStyledSystem>;
-export type BackgroundPositionOptions = CSS.BackgroundPositionProperty<TLengthStyledSystem>;
-export type BackgroundRepeatOptions = CSS.BackgroundRepeatProperty;
-export type BackgroundAttachmentOptions = CSS.BackgroundAttachmentProperty;
+type LonghandProperties = StandardLonghandProperties<TLengthStyledSystem>;
+export type BackgroundImageOptions = LonghandProperties['backgroundImage'];
+export type BackgroundSizeOptions = LonghandProperties['backgroundSize'];
+export type BackgroundPositionOptions =
+  | LonghandProperties['backgroundPositionX']
+  | LonghandProperties['backgroundPositionY'];
+export type BackgroundRepeatOptions = LonghandProperties['backgroundRepeat'];
+export type BackgroundAttachmentOptions = LonghandProperties['backgroundAttachment'];
 
 export type BackgroundImage = ResponsiveValue<BackgroundImageOptions>;
 export type BackgroundSize = ResponsiveValue<BackgroundSizeOptions>;

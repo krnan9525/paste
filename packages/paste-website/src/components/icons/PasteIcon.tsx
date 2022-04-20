@@ -1,18 +1,26 @@
 import * as React from 'react';
-import type * as CSS from 'csstype';
+import type {
+  ColorProperty,
+  DisplayProperty,
+  PositionProperty,
+  TopProperty,
+  LeftProperty,
+  OpacityProperty,
+  TransitionProperty,
+} from 'csstype';
 import {useUID} from '@twilio-paste/uid-library';
 
 export interface PasteIconProps<TLength = string | number> {
   decorative?: boolean;
   size?: number;
   title?: string;
-  color?: CSS.ColorProperty;
-  display?: CSS.DisplayProperty;
-  position?: CSS.PositionProperty;
-  top?: CSS.TopProperty<TLength>;
-  left?: CSS.LeftProperty<TLength>;
-  opacity?: CSS.OpacityProperty;
-  transition?: CSS.TransitionProperty;
+  color?: ColorProperty;
+  display?: DisplayProperty;
+  position?: PositionProperty;
+  top?: TopProperty<TLength>;
+  left?: LeftProperty<TLength>;
+  opacity?: OpacityProperty;
+  transition?: TransitionProperty;
 }
 
 const PasteIcon = React.memo(

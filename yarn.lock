@@ -23208,17 +23208,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"csstype@npm:^2.2.0, csstype@npm:^2.5.7, csstype@npm:^2.6.10, csstype@npm:^2.6.6, csstype@npm:^2.6.7, csstype@npm:^2.6.9":
-  version: 2.6.10
-  resolution: "csstype@npm:2.6.10"
-  checksum: c2803b8f0b1c6fe935101435e72360afebf4f77044dea22af2e9574c61a51f2ba58c3c211d61b72013964a0ac1a84533e70dc62e6ef4934d391c0a6ca32311eb
-  languageName: node
-  linkType: hard
-
-"csstype@npm:^3.0.2":
-  version: 3.0.3
-  resolution: "csstype@npm:3.0.3"
-  checksum: ae9b4fcd9b596164e6513181ffc1c99e76836610697826d88a03251c87c52e739f19c151c33d624171bf2bc970f1e4dfe3cc9f1492b9cc5a07a5a3b69ee8ebaf
+"csstype@npm:csstype@latest":
+  version: 3.0.11
+  resolution: "csstype@npm:3.0.11"
+  checksum: 95e56abfe9ca219ae065acb4e43f61771a03170eed919127f558dfa168240867aba7629c8d98a201a0dd06d9a5ce82686f0570031c928516c61816adbc7c877f
   languageName: node
   linkType: hard
 

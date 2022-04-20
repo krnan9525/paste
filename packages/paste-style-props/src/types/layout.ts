@@ -1,45 +1,36 @@
 // https://styled-system.com/api/#layout
-import type * as CSS from 'csstype';
+import type {StandardLonghandProperties} from 'csstype';
 import type {ThemeShape} from '@twilio-paste/theme';
 import type {ResponsiveValue, TLengthStyledSystem} from '@twilio-paste/styling-library';
 
 // Tokens
-export type WidthOptions =
-  | keyof ThemeShape['widths']
-  | '100%'
-  | '100vw'
-  | 'auto'
-  | CSS.WidthProperty<TLengthStyledSystem>;
+type LonghandProperties = StandardLonghandProperties<TLengthStyledSystem>;
+export type WidthOptions = keyof ThemeShape['widths'] | '100%' | '100vw' | 'auto' | LonghandProperties['width'];
 export type MinWidthOptions =
   | keyof ThemeShape['minWidths']
   | '100%'
   | '100vw'
   | 'auto'
-  | CSS.WidthProperty<TLengthStyledSystem>;
+  | LonghandProperties['minWidth']; // @TODO originally was width, please revise.
 export type MaxWidthOptions =
   | keyof ThemeShape['maxWidths']
   | '100%'
   | '100vw'
   | 'auto'
-  | CSS.WidthProperty<TLengthStyledSystem>;
-export type HeightOptions =
-  | keyof ThemeShape['heights']
-  | '100%'
-  | '100vh'
-  | 'auto'
-  | CSS.HeightProperty<TLengthStyledSystem>;
+  | LonghandProperties['maxWidth'];
+export type HeightOptions = keyof ThemeShape['heights'] | '100%' | '100vh' | 'auto' | LonghandProperties['height'];
 export type MinHeightOptions =
   | keyof ThemeShape['minHeights']
   | '100%'
   | '100vh'
   | 'auto'
-  | CSS.HeightProperty<TLengthStyledSystem>;
+  | LonghandProperties['minHeight'];
 export type MaxHeightOptions =
   | keyof ThemeShape['maxHeights']
   | '100%'
   | '100vh'
   | 'auto'
-  | CSS.HeightProperty<TLengthStyledSystem>;
+  | LonghandProperties['maxHeight'];
 export type IconSizeOptions = keyof ThemeShape['iconSizes'];
 
 export type Width = ResponsiveValue<WidthOptions>;
@@ -52,11 +43,11 @@ export type IconSize = ResponsiveValue<IconSizeOptions>;
 export type Size = Width | Height;
 
 // CSS native
-export type DisplayOptions = CSS.DisplayProperty;
-export type VerticalAlignOptions = CSS.VerticalAlignProperty<TLengthStyledSystem>;
-export type OverflowOptions = CSS.OverflowProperty;
-export type OverflowXOptions = CSS.OverflowXProperty;
-export type OverflowYOptions = CSS.OverflowYProperty;
+export type DisplayOptions = LonghandProperties['display'];
+export type VerticalAlignOptions = LonghandProperties['verticalAlign'];
+export type OverflowOptions = LonghandProperties['overflowAnchor']; // @TODO might need to expand this
+export type OverflowXOptions = LonghandProperties['overflowX'];
+export type OverflowYOptions = LonghandProperties['overflowY'];
 
 export type Display = ResponsiveValue<DisplayOptions>;
 export type VerticalAlign = ResponsiveValue<VerticalAlignOptions>;
