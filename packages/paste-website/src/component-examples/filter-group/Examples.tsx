@@ -3,7 +3,8 @@ import {Anchor} from '@twilio-paste/anchor';
 import {Box} from '@twilio-paste/box';
 
 import {DefaultFilterGroup} from './components/DefaultFilterGroup';
-import {TABLE_DATA} from './constants';
+import {CustomDateFilterGroup} from './components/CustomDateFilterGroup';
+import {TABLE_DATA, DATE_TIME_TABLE_DATA} from './constants';
 
 export const DefaultFilterGroupExample: React.FC = () => (
   <Box marginBottom="space70" data-cy="filter-group-default-example">
@@ -20,5 +21,14 @@ export const EmptyStateFilterGroupExample: React.FC = () => (
     <Anchor showExternal href="https://codesandbox.io/s/empty-state-filter-group-e3pvdu?file=/src/App.tsx">
       <strong>View example in CodeSandbox</strong>
     </Anchor>
+  </Box>
+);
+
+export const CustomDateFilterGroupExample: React.FC = () => (
+  <Box marginBottom="space70" data-cy="custom-filter-group-example">
+    <CustomDateFilterGroup data={DATE_TIME_TABLE_DATA} />
+    {/* <Anchor showExternal href="https://codesandbox.io/s/empty-state-filter-group-e3pvdu?file=/src/App.tsx">
+    <strong>View example in CodeSandbox</strong>
+  </Anchor> */}
   </Box>
 );

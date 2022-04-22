@@ -6907,6 +6907,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@hookform/error-message@npm:2.0.0":
+  version: 2.0.0
+  resolution: "@hookform/error-message@npm:2.0.0"
+  peerDependencies:
+    react: ">=16.8.0"
+    react-dom: ">=16.8.0"
+    react-hook-form: ^7.0.0
+  checksum: 84aa3a6cb5cc729581850dcbe2bb5dfa43431c148782b4e8676757f808cd81e220fbc4e709c4eee381b0168a991c3a3f5306acae2a09a9760859c9a188d591ec
+  languageName: node
+  linkType: hard
+
 "@icons/material@npm:^0.2.4":
   version: 0.2.4
   resolution: "@icons/material@npm:0.2.4"
@@ -14483,6 +14494,7 @@ __metadata:
     "@datadog/browser-rum": ^2.8.1
     "@docsearch/css": ^3.0.0-alpha.42
     "@docsearch/react": alpha
+    "@hookform/error-message": 2.0.0
     "@mdx-js/mdx": ^1.0.23
     "@mdx-js/react": ^1.0.23
     "@mdx-js/tag": ^0.20.3
@@ -14557,6 +14569,7 @@ __metadata:
     "@twilio-paste/types": ^3.1.5
     "@twilio-paste/uid-library": ^0.2.4
     color: ^3.1.2
+    date-fns: 2.21.3
     dotenv: ^8.2.0
     gatsby: ^2.19.19
     gatsby-image: ^2.2.41
@@ -14589,6 +14602,7 @@ __metadata:
     react-dom: ^17.0.2
     react-github-button: ^0.1.11
     react-helmet: ^6.1.0
+    react-hook-form: ^7.30.0
     react-live: ^2.2.2
     react-scrollspy: ^3.4.0
     react-visibility-sensor: 5.1.1
@@ -43649,6 +43663,15 @@ is-whitespace@latest:
   peerDependencies:
     react: ">=16.3.0"
   checksum: a4998479dab7fc1c2799eddefb1870a9d881b5f71cfdf97979a9882e42f4bb50402d55335f308f461e735e01a06f46b16cc7b4e6bcb22c7a4a6f85a753c5c106
+  languageName: node
+  linkType: hard
+
+"react-hook-form@npm:^7.30.0":
+  version: 7.30.0
+  resolution: "react-hook-form@npm:7.30.0"
+  peerDependencies:
+    react: ^16.8.0 || ^17 || ^18
+  checksum: 7af442c80e1d8e04b6345f4f46177974d82488e81cc12b165d6ff1c69ba0f6234bd2ef0f7b51dda34f77b36fe74464815bbb0f4c77dc2cd9793f8e89d528ae25
   languageName: node
   linkType: hard
 
