@@ -101,7 +101,8 @@
     "@changesets/cli": "^2.13.1",
     "@commitlint/cli": "16.2.1",
     "@commitlint/config-conventional": "16.2.1",
-    "@emotion/babel-preset-css-prop": "^10.0.14",
+    "@emotion/babel-preset-css-prop": "^11.2.0",
+    "@emotion/css": "^11.9.0",
     "@emotion/eslint-plugin": "^11.7.0",
     "@emotion/jest": "^11.9.1",
     "@expo/spawn-async": "^1.5.0",
@@ -154,7 +155,7 @@
     "commander": "^2.20.0",
     "concurrently": "^4.1.1",
     "cross-env": "^5.2.0",
-    "csstype": "^2.6.10",
+    "csstype": "^3.0.11",
     "cypress": "9.3.1",
     "danger": "^10.6.6",
     "del": "^5.1.0",
@@ -223,8 +224,9 @@
   },
   "resolutions": {
     "@emotion/core": "npm:@emotion/react@11.9.0",
-    "@storybook/theming/emotion-theming": "npm:@emotion/react@latest",
-    "csstype": "npm:csstype@latest",
+    "@emotion/css": "npm:@emotion/css@11.9.0",
+    "@storybook/theming/emotion-theming": "npm:@emotion/react@11.9.0",
+    "csstype": "npm:csstype@3.0.11",
     "react-hot-loader": "^4.13.0"
   },
   "husky": {
