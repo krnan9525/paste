@@ -191,17 +191,14 @@ export const responsive = (styles: {[key: string]: any}) => (theme: JSON) => {
   return next;
 };
 
+// @TODO need to clean up types here.
 export const css = (args: any) => (props = {}): CSSObject => {
   // @ts-ignore
   const theme = {...defaultTheme, ...(props.theme || props)};
-  // @NOTE for some component it looks like the theme prop (or props for theme) are not passed
-  // in console.log statement we are only seeing defaultTheme properties
-  console.log('@@ Theme: ', theme);
+
   let result: {[key: string]: any} = {};
   const obj = typeof args === 'function' ? args(theme) : args;
   const styles = responsive(obj)(theme);
-
-  console.log('## style prop keys ', Object.keys(styles));
 
   // eslint-disable-next-line guard-for-in,no-restricted-syntax
   for (const key in styles) {
@@ -227,8 +224,6 @@ export const css = (args: any) => (props = {}): CSSObject => {
     const transform = get(transforms, prop, get);
     const value = transform(scale, val, val);
 
-    console.log({prop, scaleName, scale, value});
-
     if (multiples[prop]) {
       const dirs = multiples[prop];
 
@@ -240,8 +235,6 @@ export const css = (args: any) => (props = {}): CSSObject => {
       result[prop] = value;
     }
   }
-
-  console.log('&& result: ', result);
 
   return result;
 };
