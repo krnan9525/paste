@@ -129,6 +129,7 @@ describe('Alert', () => {
       render(
         <CustomizationProvider
           baseTheme="default"
+          theme={TestTheme}
           elements={{
             ALERT: {
               backgroundColor: 'colorBackground',
@@ -152,22 +153,25 @@ describe('Alert', () => {
 
       const alert = screen.getByTestId('alert-customization');
 
-      expect(alert).toHaveStyleRule('background-color', 'rgb(244,244,246)');
-      expect(alert.querySelector('[data-paste-element="ALERT_ICON"]')).toHaveStyleRule('color', 'rgb(0,20,137)');
+      expect(alert).toHaveStyleRule('background-color', 'mock__colorBackground');
+      expect(alert.querySelector('[data-paste-element="ALERT_ICON"]')).toHaveStyleRule(
+        'color',
+        'mock__colorTextIconNeutral'
+      );
       expect(alert.querySelector('[data-paste-element="ALERT_DISMISS_BUTTON"]')).toHaveStyleRule(
         'background-color',
-        'rgb(18,28,45)'
+        'mock__colorBackgroundBodyInverse'
       );
       expect(alert.querySelector('[data-paste-element="ALERT_DISMISS_ICON"]')).toHaveStyleRule(
         'color',
-        'rgb(255,255,255)'
+        'mock__colorTextInverse'
       );
     });
 
     it('should set custom element name and properly apply styles to Alert and customizable children', (): void => {
       render(
         <CustomizationProvider
-          baseTheme="default"
+          theme={TestTheme}
           elements={{
             MYALERT: {
               backgroundColor: 'colorBackground',
@@ -196,15 +200,18 @@ describe('Alert', () => {
       expect(alert.querySelector('[data-paste-element="MYALERT_DISMISS_BUTTON"]')).toBeInTheDocument();
       expect(alert.querySelector('[data-paste-element="MYALERT_DISMISS_ICON"]')).toBeInTheDocument();
 
-      expect(alert).toHaveStyleRule('background-color', 'rgb(244,244,246)');
-      expect(alert.querySelector('[data-paste-element="MYALERT_ICON"]')).toHaveStyleRule('color', 'rgb(0,20,137)');
+      expect(alert).toHaveStyleRule('background-color', 'mock__colorBackground');
+      expect(alert.querySelector('[data-paste-element="MYALERT_ICON"]')).toHaveStyleRule(
+        'color',
+        'mock__colorTextIconNeutral'
+      );
       expect(alert.querySelector('[data-paste-element="MYALERT_DISMISS_BUTTON"]')).toHaveStyleRule(
         'background-color',
-        'rgb(18,28,45)'
+        'mock__colorBackgroundBodyInverse'
       );
       expect(alert.querySelector('[data-paste-element="MYALERT_DISMISS_ICON"]')).toHaveStyleRule(
         'color',
-        'rgb(255,255,255)'
+        'mock__colorTextInverse'
       );
     });
   });
