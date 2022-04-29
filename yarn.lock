@@ -12394,7 +12394,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@twilio-paste/animation-library@^0.3.5, @twilio-paste/animation-library@workspace:packages/paste-libraries/animation":
+"@twilio-paste/animation-library@^0.3.5, @twilio-paste/animation-library@^0.3.6, @twilio-paste/animation-library@workspace:packages/paste-libraries/animation":
   version: 0.0.0-use.local
   resolution: "@twilio-paste/animation-library@workspace:packages/paste-libraries/animation"
   dependencies:
@@ -12865,7 +12865,7 @@ __metadata:
     "@twilio-paste/alert": ^9.0.0
     "@twilio-paste/alert-dialog": ^3.0.0
     "@twilio-paste/anchor": ^7.0.0
-    "@twilio-paste/animation-library": ^0.3.5
+    "@twilio-paste/animation-library": ^0.3.6
     "@twilio-paste/aspect-ratio": ^5.0.2
     "@twilio-paste/avatar": ^4.0.0
     "@twilio-paste/badge": ^3.0.0
@@ -12915,7 +12915,7 @@ __metadata:
     "@twilio-paste/select": ^7.0.0
     "@twilio-paste/separator": ^3.0.2
     "@twilio-paste/sibling-box": ^4.0.2
-    "@twilio-paste/skeleton-loader": ^1.0.3
+    "@twilio-paste/skeleton-loader": ^1.0.4
     "@twilio-paste/spinner": ^9.0.0
     "@twilio-paste/stack": ^3.0.2
     "@twilio-paste/style-props": ^4.0.2
@@ -13975,11 +13975,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@twilio-paste/skeleton-loader@^1.0.2, @twilio-paste/skeleton-loader@^1.0.3, @twilio-paste/skeleton-loader@workspace:packages/paste-core/components/skeleton-loader":
+"@twilio-paste/skeleton-loader@^1.0.2, @twilio-paste/skeleton-loader@^1.0.4, @twilio-paste/skeleton-loader@workspace:packages/paste-core/components/skeleton-loader":
   version: 0.0.0-use.local
   resolution: "@twilio-paste/skeleton-loader@workspace:packages/paste-core/components/skeleton-loader"
   dependencies:
-    "@twilio-paste/animation-library": ^0.3.5
+    "@twilio-paste/animation-library": ^0.3.6
     "@twilio-paste/box": ^5.0.2
     "@twilio-paste/design-tokens": ^7.1.1
     "@twilio-paste/style-props": ^4.0.2

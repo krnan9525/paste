@@ -1,5 +1,17 @@
 # Change Log
 
+## 12.0.1
+
+### Patch Changes
+
+- [`322400c65`](https://github.com/twilio-labs/paste/commit/322400c659678e71afe9e6fc2db543ec7e3046ba) [#2282](https://github.com/twilio-labs/paste/pull/2282) Thanks [@zahnster](https://github.com/zahnster)! - [Skeleton Loader] Update Spring animation to CSS animation
+
+* [`322400c65`](https://github.com/twilio-labs/paste/commit/322400c659678e71afe9e6fc2db543ec7e3046ba) [#2282](https://github.com/twilio-labs/paste/pull/2282) Thanks [@zahnster](https://github.com/zahnster)! - [Animation Library] Updates React Spring dependencies to resolve bug with RequestAnimationFrame calls
+
+* Updated dependencies [[`322400c65`](https://github.com/twilio-labs/paste/commit/322400c659678e71afe9e6fc2db543ec7e3046ba), [`322400c65`](https://github.com/twilio-labs/paste/commit/322400c659678e71afe9e6fc2db543ec7e3046ba)]:
+  - @twilio-paste/skeleton-loader@1.0.4
+  - @twilio-paste/animation-library@0.3.6
+
 ## 12.0.0
 
 ### Major Changes
